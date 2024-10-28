@@ -1,0 +1,198 @@
+/* Basic styling for body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+/* Header styles */
+header {
+    background-color: #343a40;
+    padding: 15px 20px; /* Increased padding for a more spacious look */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo styles */
+.logo {
+    font-size: 2em;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.logo:hover {
+    color: #0077b6;
+    transform: scale(1.05);
+}
+
+/* Navigation styles */
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold; /* Bold links for better visibility */
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.nav-links a:hover {
+    color: #0077b6; /* Change color on hover */
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 5px;
+    border-radius: 2px;
+}
+
+/* Media query for responsive header */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide navigation links by default on smaller screens */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Positioning below the header */
+        right: 0;
+        background-color: #343a40;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    /* Show hamburger menu on smaller screens */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Toggle navigation links */
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+header h1 {
+    font-size: 2.5em; /* Larger font size for the title */
+    color: #03045e; /* Darker color for better contrast */
+    margin: 0; /* Remove default margin */
+}
+
+/* Cart container styling */
+.cart-container {
+    background-color: #ffffff; 
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Cart header styling */
+.cart-container h2 {
+    color: #03045e;
+    text-align: center;
+    font-size: 2em; 
+    margin-bottom: 1em; 
+}
+
+/* Cart item styling */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0; /* Increased padding for better spacing */
+}
+
+.cart-item h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.2em; /* Slightly larger font size */
+}
+
+.cart-item .price {
+    color: #0077b6;
+    font-weight: bold;
+    font-size: 1.2em; /* Slightly larger price font */
+}
+
+/* Remove button styling within cart */
+.cart-item button {
+    background-color: #ff4b4b;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cart-item button:hover {
+    background-color: #d94040;
+}
+
+/* Total price styling */
+.total {
+    text-align: right;
+    font-size: 1.5em; /* Larger total font size */
+    margin-top: 20px;
+    color: #03045e;
+    font-weight: bold; /* Make total bold */
+}
+
+/* Checkout button styling */
+.checkout-button {
+    display: block;
+    background-color: #00b4d8;
+    color: white;
+    padding: 12px; /* Increased padding for button */
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1.2em; /* Increased font size for better readability */
+    margin-top: 15px; /* Space above the button */
+}
+
+/* Checkout button hover effect */
+.checkout-button:hover {
+    background-color: #0077b6;
+    transform: scale(1.05);
+}
+
+/* Additional styling for the cart items */
+.cart-items {
+    max-height: 300px; /* Limit height for scroll */
+    overflow-y: auto; /* Add scroll if items exceed height */
+    margin-bottom: 20px; /* Space below items */
+}

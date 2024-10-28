@@ -1,0 +1,295 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+/* Header styles */
+header {
+    background-color: #343a40;
+    padding: 15px 20px; /* Increased padding for a more spacious look */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensures the header spans the full width of the page */
+    z-index: 1000; /* Keeps header above other content */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for separation */
+}
+
+/* Add padding to the body to ensure the header doesn't overlap content */
+body {
+    padding-top: 70px; /* Adjust based on header height */
+}
+
+/* Other existing styles remain unchanged */
+
+
+/* Logo styles */
+.logo {
+    font-size: 2em; /* Increased font size for the logo */
+    color: white; /* Text color for the logo */
+    text-decoration: none; /* Remove underline from the link */
+    font-weight: bold; /* Make the logo text bold */
+    letter-spacing: 1px; /* Slightly increase the spacing between letters */
+    font-family: 'Poppins', sans-serif; /* Apply the stylish font */
+    transition: color 0.3s, transform 0.3s; /* Smooth color and transform transition */
+}
+
+.logo:hover {
+    color: #0077b6; /* Change color on hover */
+    transform: scale(1.05); /* Slightly enlarge the logo on hover */
+}
+
+/* Navigation styles */
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold; /* Bold links for better visibility */
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.nav-links a:hover {
+    color: #0077b6; /* Change color on hover */
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 5px;
+    border-radius: 2px;
+}
+
+/* Media query for responsive header */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide navigation links by default on smaller screens */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Positioning below the header */
+        right: 0;
+        background-color: #343a40;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    /* Show hamburger menu on smaller screens */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Toggle navigation links */
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+
+
+
+
+/* Product Cards*/
+.container {
+    text-align: center;
+}
+
+.title {
+    font-size: 2em;
+    margin: 20px 0;
+    color: #03045e;
+}
+
+.description {
+    font-size: 1.2em; /* Adjust the font size as needed */
+    color: #03045e; /* Text color */
+    margin: 10px 0; /* Margin for spacing */
+}
+
+.listProduct {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the product cards */
+}
+
+.product-card {
+    background-color: #ddecf0; /* Set product card background color */
+    border: 2px solid #03045e; /* Border color */
+    border-radius: 10px;
+    padding: 10px; /* Reduced padding for smaller cards */
+    margin: 10px; /* Margin around each product card */
+    flex: 0 0 50%; /* Allow flex item to take approximately 30% of the container */
+    max-width: 350px; /* Set a maximum width for product cards */
+    min-height: 100px; /* Set a minimum height */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s; /* Add transition for hover effect */
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.product-card img {
+    max-width: 80%; /* Adjusted size for the images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.price {
+    font-size: 1.2em;
+    color: black; /* Change price color for visibility */
+    margin: 10px 0;
+}
+
+.btn {
+    background-color: #00b4d8;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0077b6;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .product-card {
+        flex: 0 0 45%; /* 2 cards per row on smaller screens */
+        max-width: none; /* Remove max-width to fit better */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        flex: 0 0 100%; /* 1 card per row on very small screens */
+        max-width: none; /* Remove max-width to fit better */
+    }
+}
+
+
+
+/* Main product detail container */
+.product-detail-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid #03045e;
+}
+
+.product-detail-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-title {
+    font-size: 2em;
+    color: #03045e;
+    margin: 15px 0;
+}
+
+.product-price {
+    font-size: 1.5em;
+    color: #0077b6;
+    margin: 10px 0;
+}
+
+.product-description {
+    font-size: 1.1em;
+    color: #333;
+    margin: 15px 0;
+}
+
+.checkout-button,
+.add-to-cart-button {
+    display: inline-block;
+    background-color: #00b4d8;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 5px; /* Added margin for spacing */
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.checkout-button:hover,
+.add-to-cart-button:hover {
+    background-color: #0077b6;
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+
+
+
+
+
+
+
+
+/* Footer */
+.portfolio-footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.portfolio-footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.portfolio-footer ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+.portfolio-footer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.portfolio-footer a:hover {
+    color: #98c1d9; /* Lighter shade on hover */
+}
+
+.contact-info {
+    margin: 1rem 0;
+}
+
+
+
+

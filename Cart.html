@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="Cart.css">
+</head>
+<body>
+    <header>
+        <a href="Homepage.html" class="logo">DigiGoods</a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="ebooks.html">eBooks</a></li>
+                <li><a href="templates.html">Templates</a></li>
+                <li><a href="poster.html">Posters</a></li>
+                <li><a href="planners.html">Planners</a></li>
+                <li><a href="cart.html">Cart</a></li> <!-- Link to cart page -->
+            </ul>
+        </nav>
+        <div class="hamburger" onclick="toggleMenu()"> <!-- Hamburger menu button -->
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+   <!-- Cart Section -->
+   <div class="cart-container" id="cart">
+    <h2>Your Cart</h2>
+    <div class="cart-items"></div>
+    <p class="total">Total: $<span id="totalPrice">0</span></p>
+    <button class="checkout-button" onclick="checkout()">Proceed to Checkout</button>
+</div>
+
+<script src="Cart.js"></script>
+</body>
+</html>
+
+
+
